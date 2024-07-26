@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/C%C3%B3digos/Projetos/Projeto-Capacitacao-IA-Ciclo-2/mlruns/973721519742986119/80ebf9ad386c4485a37251a27581c834/artifacts
+end_time: 1722029484806
+entry_point_name: ''
+experiment_id: '973721519742986119'
+lifecycle_stage: active
+run_id: 80ebf9ad386c4485a37251a27581c834
+run_name: 6. SVR
+run_uuid: 80ebf9ad386c4485a37251a27581c834
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722029478605
+status: 3
+tags: []
+user_id: Filipe Rodrigues

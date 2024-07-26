@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/C%C3%B3digos/Projetos/Projeto-Capacitacao-IA-Ciclo-2/mlruns/973721519742986119/0527002db7f64fb9824f098729d9af53/artifacts
+end_time: 1722030011754
+entry_point_name: ''
+experiment_id: '973721519742986119'
+lifecycle_stage: active
+run_id: 0527002db7f64fb9824f098729d9af53
+run_name: 9. MLPRegressor
+run_uuid: 0527002db7f64fb9824f098729d9af53
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722029922335
+status: 3
+tags: []
+user_id: Filipe Rodrigues

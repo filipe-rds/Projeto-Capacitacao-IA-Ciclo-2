@@ -1,0 +1,20 @@
+artifact_path: MLPRegressor
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.4
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.1
+mlflow_version: 2.14.3
+model_size_bytes: 573
+model_uuid: 3691f7936a2947d3b62141fecb1aae19
+run_id: 0527002db7f64fb9824f098729d9af53
+utc_time_created: '2024-07-26 21:40:08.460330'

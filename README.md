@@ -1,4 +1,4 @@
-<h1 align="center">🤖 Projeto Final - Capacitação de IA (Ciclo 2) </h1>
+<h1 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" alt="Robot" width="30" height="30" /> Projeto Final - Capacitação de IA (Ciclo 2) </h1>
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/filipe-rds/Projeto-Capacitacao-IA-Ciclo-2?color=green">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/filipe-rds/Projeto-Capacitacao-IA-Ciclo-2?color=green">
@@ -16,7 +16,6 @@
 <div style="display: inline_block" ><br>
     <h3>💻 Tecnologias e Ferramentas </h3>
     <img alt="Anaconda" src="https://img.shields.io/badge/anaconda-000000?style=for-the-badge&logo=anaconda&logoColor=white">
-    <img alt="Jupyter Notebook" src="https://img.shields.io/badge/Jupyter Notebook-000000?style=for-the-badge&logo=jupyter&logoColor=white">
     <img alt="MLflow" src="https://img.shields.io/badge/mlflow-000000?style=for-the-badge&logo=mlflow&logoColor=white">
-    
+    <img alt="Jupyter Notebook" src="https://img.shields.io/badge/Jupyter Notebook-000000?style=for-the-badge&logo=jupyter&logoColor=white">
 </div>
