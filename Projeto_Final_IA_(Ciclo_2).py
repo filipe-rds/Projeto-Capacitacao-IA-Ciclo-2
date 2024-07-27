@@ -143,9 +143,9 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 
 # Aplicar Recursive Filter Elimination (RFE) para Seleção de Features
 num_features = 50  # Número de features a serem selecionadas
-estimator = DecisionTreeRegressor()
+# estimator = DecisionTreeRegressor()
 # estimator = LogisticRegression(max_iter=1000)
-# estimator = Lasso(alpha=0.01, max_iter=1000)
+estimator = Lasso(alpha=0.01, max_iter=1000)
 selector = RFE(estimator, n_features_to_select=num_features)
 
 # Fit e Transform no Conjunto de Treinamento
@@ -158,17 +158,17 @@ x_test_selected = selector.transform(x_test)
 
 # Definir os modelos e suas variações de parâmetros
 models = {
-    "DecisionTree": [
+    "Decision Tree": [
         {"criterion": "squared_error", "max_depth": 10, "min_samples_split": 4},
         {"criterion": "squared_error", "max_depth": 20, "min_samples_split": 10},
         {"criterion": "friedman_mse", "max_depth": 15, "min_samples_split": 5},
     ],
-    "SVR": [
+    "Support Vector Machine": [
         {"C": 1.0, "kernel": "linear", "epsilon": 0.1},
         {"C": 10.0, "kernel": "rbf", "epsilon": 0.01},
         {"C": 100.0, "kernel": "poly", "degree": 3, "epsilon": 0.001},
     ],
-    "MLPRegressor": [
+    "Multi-layer Perceptron": [
         {"hidden_layer_sizes": (100, 50), "activation": "relu",
          "solver": "adam", "max_iter": 1000},
         {"hidden_layer_sizes": (50, 50, 50), "activation": "tanh",
@@ -179,10 +179,10 @@ models = {
     "Bagging": [
         {},
     ],
-    "RandomForest": [
+    "Random Forest": [
         {},
     ],
-    "GradientBoosting": [
+    "Gradient Boosting": [
         {},
     ],
     "XGBoost": [
@@ -193,15 +193,14 @@ models = {
     ]
 }
 
-
-# Mapeamento de nomes de modelos para classes 
+# Mapeamento de nomes de modelos para classes
 model_classes = {
-    "DecisionTree": DecisionTreeRegressor,
-    "SVR": SVR,
-    "MLPRegressor": MLPRegressor,
+    "Decision Tree": DecisionTreeRegressor,
+    "Support Vector Machine": SVR,
+    "Multi-layer Perceptron": MLPRegressor,
     "Bagging": BaggingRegressor,
-    "RandomForest": RandomForestRegressor,
-    "GradientBoosting": GradientBoostingRegressor,
+    "Random Forest": RandomForestRegressor,
+    "Gradient Boosting": GradientBoostingRegressor,
     "XGBoost": XGBRegressor,
     "LightGBM": LGBMRegressor,
 }

@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/C%C3%B3digos/Projetos/Projeto-Capacitacao-IA-Ciclo-2/mlruns/280677517988468633/1d48eeb92ef04c4cac300bbf171fa3f9/artifacts
+end_time: 1722082430996
+entry_point_name: ''
+experiment_id: '280677517988468633'
+lifecycle_stage: active
+run_id: 1d48eeb92ef04c4cac300bbf171fa3f9
+run_name: 14. LightGBM
+run_uuid: 1d48eeb92ef04c4cac300bbf171fa3f9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722082425402
+status: 3
+tags: []
+user_id: Filipe Rodrigues

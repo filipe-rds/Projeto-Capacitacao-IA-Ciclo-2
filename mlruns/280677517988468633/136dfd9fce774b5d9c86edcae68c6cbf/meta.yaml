@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/C%C3%B3digos/Projetos/Projeto-Capacitacao-IA-Ciclo-2/mlruns/280677517988468633/136dfd9fce774b5d9c86edcae68c6cbf/artifacts
+end_time: 1722082415974
+entry_point_name: ''
+experiment_id: '280677517988468633'
+lifecycle_stage: active
+run_id: 136dfd9fce774b5d9c86edcae68c6cbf
+run_name: 11. Random Forest
+run_uuid: 136dfd9fce774b5d9c86edcae68c6cbf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722082409384
+status: 3
+tags: []
+user_id: Filipe Rodrigues

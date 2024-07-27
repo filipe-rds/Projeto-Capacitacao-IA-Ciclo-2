@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/C%C3%B3digos/Projetos/Projeto-Capacitacao-IA-Ciclo-2/mlruns/280677517988468633/995c8e2363ca455eb17d6dbc59855692/artifacts
+end_time: 1722082405408
+entry_point_name: ''
+experiment_id: '280677517988468633'
+lifecycle_stage: active
+run_id: 995c8e2363ca455eb17d6dbc59855692
+run_name: 9. Multi-layer Perceptron
+run_uuid: 995c8e2363ca455eb17d6dbc59855692
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722082297293
+status: 3
+tags: []
+user_id: Filipe Rodrigues
