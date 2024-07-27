@@ -282,6 +282,6 @@ mlflow.set_tracking_uri(mlflow_tracking_uri)
 
 # Exibir a URL do MLflow UI
 print(f"\n\nMLflow UI está rodando em {mlflow_tracking_uri}\n")
-print("Caso queria cancelar a execução do MLflow, pressione Ctrl + C no terminal.\n\n\n")
-
+print("Caso queria cancelar a execução do MLflow, pressione Ctrl + C no terminal.\n\n\n\n")
+print("Estabelecendo conexão do servidor local com o MLflow UI...")
 os.system('mlflow ui')
