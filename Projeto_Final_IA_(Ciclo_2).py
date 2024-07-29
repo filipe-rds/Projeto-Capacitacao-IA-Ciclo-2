@@ -144,8 +144,8 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 # Aplicar Recursive Filter Elimination (RFE) para Seleção de Features
 num_features = 50  # Número de features a serem selecionadas
 # estimator = DecisionTreeRegressor()
-# estimator = LogisticRegression(max_iter=1000)
-estimator = Lasso(alpha=0.01, max_iter=1000)
+# estimator = LogisticRegression(max_iter=2500)
+estimator = Lasso(alpha=0.01, max_iter=2500)
 selector = RFE(estimator, n_features_to_select=num_features)
 
 # Fit e Transform no Conjunto de Treinamento
@@ -245,17 +245,16 @@ with mlflow.start_run(run_name="Projeto Final Ciclo 2") as main_run:
                 mae = mean_absolute_error(y_train, predictions)
                 mape = np.mean(np.abs((y_train - predictions) / y_train)) * 100
 
-                # Registrar os parâmetros
-                mlflow.log_param("model_name", model_name)
-
                 # Registrar parâmetros individualmente
                 for key, value in params.items():
                     mlflow.log_param(key, str(value))
 
+                # Registrar métricas e modelo
                 mlflow.log_metric("RMSE", rmse)
                 mlflow.log_metric("MAE", mae)
                 mlflow.log_metric("MAPE", mape)
-                mlflow.sklearn.log_model(model, f"{model_name}")
+                
+                mlflow.sklearn.log_model(model, model_name)
 
                 # Armazenar resultados
                 results.append({"model": model_name, "params": params,

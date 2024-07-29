@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/C%C3%B3digos/Projetos/Projeto-Capacitacao-IA-Ciclo-2/mlruns/285849481007160587/6b3f7a1ce16848d18479e70d836fee73/artifacts
+end_time: 1722293956223
+entry_point_name: ''
+experiment_id: '285849481007160587'
+lifecycle_stage: active
+run_id: 6b3f7a1ce16848d18479e70d836fee73
+run_name: 10. Bagging
+run_uuid: 6b3f7a1ce16848d18479e70d836fee73
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722293952392
+status: 3
+tags: []
+user_id: Filipe Rodrigues
