@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/C%C3%B3digos/Projetos/Projeto-Capacitacao-IA-Ciclo-2/mlruns/660749878330109318/53d0c0f7116f434396942e1a49a9f528/artifacts
+end_time: 1722304240012
+entry_point_name: ''
+experiment_id: '660749878330109318'
+lifecycle_stage: active
+run_id: 53d0c0f7116f434396942e1a49a9f528
+run_name: 13. XGBoost
+run_uuid: 53d0c0f7116f434396942e1a49a9f528
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722304235954
+status: 3
+tags: []
+user_id: Filipe Rodrigues

@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/C%C3%B3digos/Projetos/Projeto-Capacitacao-IA-Ciclo-2/mlruns/660749878330109318/14434782ba464054876a890a955cd0a9/artifacts
+end_time: 1722304235945
+entry_point_name: ''
+experiment_id: '660749878330109318'
+lifecycle_stage: active
+run_id: 14434782ba464054876a890a955cd0a9
+run_name: 12. Gradient Boosting
+run_uuid: 14434782ba464054876a890a955cd0a9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722304230643
+status: 3
+tags: []
+user_id: Filipe Rodrigues

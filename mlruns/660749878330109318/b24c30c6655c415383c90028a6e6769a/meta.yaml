@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/C%C3%B3digos/Projetos/Projeto-Capacitacao-IA-Ciclo-2/mlruns/660749878330109318/b24c30c6655c415383c90028a6e6769a/artifacts
+end_time: 1722303644045
+entry_point_name: ''
+experiment_id: '660749878330109318'
+lifecycle_stage: active
+run_id: b24c30c6655c415383c90028a6e6769a
+run_name: 4. Support Vector Machine
+run_uuid: b24c30c6655c415383c90028a6e6769a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722303638118
+status: 3
+tags: []
+user_id: Filipe Rodrigues

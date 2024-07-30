@@ -11,6 +11,7 @@ Projeto_Final_IA_(Ciclo_2).ipynb
 
 # Instalação de bibliotecas necessárias para execução do código
 import os
+print("Instalando bibliotecas necessárias para execução do código...")
 os.system('pip install numpy pandas scikit-learn mlflow xgboost lightgbm --quiet')
 
 # Tratamento de Dataset e Métricas
@@ -43,7 +44,6 @@ import mlflow.sklearn
 
 # Terminal
 import warnings
-from IPython.display import clear_output
 warnings.filterwarnings("ignore")
 
 """
@@ -189,7 +189,7 @@ models = {
         {},
     ],
     "LightGBM": [
-        {},
+        {'verbosity': -1},
     ]
 }
 
@@ -226,13 +226,12 @@ print("\nSerão utilizados 10 folds para validação cruzada.")
 print("Serão selecionados os 3 melhores modelos com base na métrica MAPE.")
 print("Aguarde, isso pode levar alguns minutos...")
 
-# Run principal
-with mlflow.start_run(run_name="Projeto Final Ciclo 2") as main_run:
+# Run para registrar os modelos treinados
+with mlflow.start_run(run_name="Modelos Treinados") as main_run: # Principal
     for model_name, param_variations in models.items():
         for params in param_variations:
             counter += 1
-            # Run aninhada
-            with mlflow.start_run(run_name=f"{counter}. {model_name}", nested=True):
+            with mlflow.start_run(run_name=f"{counter}. {model_name}", nested=True): # Aninhada
                 # Instanciar o modelo usando o dicionário de classes
                 model = model_classes[model_name](**params)
 
@@ -253,7 +252,7 @@ with mlflow.start_run(run_name="Projeto Final Ciclo 2") as main_run:
                 mlflow.log_metric("RMSE", rmse)
                 mlflow.log_metric("MAE", mae)
                 mlflow.log_metric("MAPE", mape)
-                
+
                 mlflow.sklearn.log_model(model, model_name)
 
                 # Armazenar resultados
@@ -263,14 +262,44 @@ with mlflow.start_run(run_name="Projeto Final Ciclo 2") as main_run:
     # Selecionar os 3 melhores modelos com base na métrica MAPE
     best_models = sorted(results, key=lambda x: x["MAPE"])[:3]
 
-    # Limpar a saída do terminal
-    clear_output(wait=True)
+print("\n\nMelhores Modelos:\n")
+for model_info in best_models:
+    print(model_info)
+print("\n\n")
 
-    # Exibir os melhores modelos e suas métricas
-    print("\nMelhores Modelos:\n")
-    for model_info in best_models:
-        print(model_info)
+# Run para registrar os melhores modelos
+acc = 4
+with mlflow.start_run(run_name="Melhores Modelos") as main_run: # Pricipal
+    for model_info in reversed(best_models):
+        acc -= 1
+        model_name = model_info["model"]
+        params = model_info["params"]
 
+        with mlflow.start_run(run_name=f"{acc}. {model_name}", nested=True): # Aninhada
+            # Instanciar o modelo usando o dicionário de classes
+            model = model_classes[model_name](**params)
+
+            # Realizar validação cruzada para 10 folds e calcular as previsões
+            predictions = cross_val_predict(
+                model, x_train_selected, y_train, cv=10)
+
+            # Calcular as métricas
+            rmse = np.sqrt(mean_squared_error(y_train, predictions))
+            mae = mean_absolute_error(y_train, predictions)
+            mape = np.mean(np.abs((y_train - predictions) / y_train)) * 100
+
+            # Registrar parâmetros individualmente
+            for key, value in params.items():
+                mlflow.log_param(key, str(value))
+
+            # Registrar métricas e modelo
+            mlflow.log_metric("RMSE", rmse)
+            mlflow.log_metric("MAE", mae)
+            mlflow.log_metric("MAPE", mape)
+
+            mlflow.sklearn.log_model(
+                model, model_name, registered_model_name=model_name)
+            
 """## 💾 Modelos Registrados no MLFLOW"""
 
 # Definir o tracking URI do MLfloww

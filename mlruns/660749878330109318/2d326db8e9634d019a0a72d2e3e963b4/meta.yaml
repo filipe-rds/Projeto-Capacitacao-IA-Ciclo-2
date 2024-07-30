@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/C%C3%B3digos/Projetos/Projeto-Capacitacao-IA-Ciclo-2/mlruns/660749878330109318/2d326db8e9634d019a0a72d2e3e963b4/artifacts
+end_time: 1722304256188
+entry_point_name: ''
+experiment_id: '660749878330109318'
+lifecycle_stage: active
+run_id: 2d326db8e9634d019a0a72d2e3e963b4
+run_name: 1. Decision Tree
+run_uuid: 2d326db8e9634d019a0a72d2e3e963b4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722304252645
+status: 3
+tags: []
+user_id: Filipe Rodrigues
